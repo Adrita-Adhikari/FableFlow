@@ -1,0 +1,178 @@
+/* ========================================================
+   FABLEFLOW RESPONSIVE MEDIA QUERIES
+   ======================================================== */
+
+@media (max-width: 1024px) {
+  .hero-banner {
+    padding: 22px 20px;
+  }
+
+  .editor-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .community-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .story-detail-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .story-detail-cover {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-tabs {
+    display: none;
+  }
+
+  .brand-logo-img {
+    height: 40px !important;
+    max-height: 40px !important;
+  }
+
+  .auth-brand-logo {
+    height: 52px !important;
+    max-height: 52px !important;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .btn-ai-pill span {
+    display: none;
+  }
+
+  .brand-tagline-sub {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .story-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .main-content {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .ai-assistant-drawer {
+    width: 100vw;
+  }
+
+  .floating-ai-trigger.drawer-open {
+    display: none !important;
+  }
+
+  .modal-window {
+    padding: 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  /* Stabilized Continue Reading Card on Tablets */
+  .continue-reading-card {
+    height: 80px !important;
+    min-height: 80px !important;
+    max-height: 80px !important;
+    padding: 0 12px !important;
+  }
+
+  .continue-reading-btn {
+    padding: 0 12px !important;
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-ai-trigger {
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Stabilized Continue Reading Card on Mobile Screens */
+  .continue-reading-card {
+    height: 84px !important;
+    min-height: 84px !important;
+    max-height: 84px !important;
+    padding: 0 10px !important;
+  }
+
+  .continue-reading-cover {
+    width: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    height: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
+  }
+
+  .continue-reading-title {
+    font-size: 13px !important;
+  }
+
+  .continue-reading-author {
+    font-size: 11px !important;
+  }
+
+  .continue-reading-btn {
+    height: 34px !important;
+    max-height: 34px !important;
+    padding: 0 10px !important;
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo-img {
+    height: 36px !important;
+    max-height: 36px !important;
+  }
+
+  .auth-brand-logo {
+    height: 44px !important;
+    max-height: 44px !important;
+  }
+
+  .hero-title {
+    font-size: 1.45rem;
+  }
+
+  .hero-banner {
+    padding: 18px 14px;
+  }
+
+  .story-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .book-card-title {
+    font-size: 0.8rem;
+  }
+
+  .book-card-desc {
+    display: none;
+  }
+
+  .wotd-title {
+    font-size: 1.55rem;
+  }
+
+  .quiz-option-btn {
+    font-size: 0.8rem;
+    padding: 10px 12px;
+  }
+}
