@@ -53,6 +53,25 @@
           </button>
         </nav>
 
+        <!-- Functional Navbar Search Bar -->
+        <div class="nav-search-container" id="nav-search-container" role="search">
+          <div class="nav-search-bar" id="nav-search-bar">
+            <span class="nav-search-icon" aria-hidden="true">🔍</span>
+            <input 
+              type="search" 
+              id="nav-search-input" 
+              class="nav-search-input" 
+              placeholder="Search stories, authors, genres..." 
+              autocomplete="off" 
+              spellcheck="false"
+              aria-label="Search stories, authors, and genres"
+            />
+            <button type="button" class="nav-search-clear-btn" id="nav-search-clear-btn" aria-label="Clear search" style="display: none;">✕</button>
+          </div>
+          <!-- Live Search Results Dropdown -->
+          <div class="nav-search-dropdown" id="nav-search-dropdown" style="display: none;" role="region" aria-label="Search Results"></div>
+        </div>
+
         <!-- Right Side Nav Actions -->
         <div class="nav-actions">
           
