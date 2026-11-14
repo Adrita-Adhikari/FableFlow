@@ -11,8 +11,8 @@
 
 | Team Member | Role & Key Focus Areas | GitHub Profile |
 | :--- | :--- | :--- |
-| **Debjit Saha** | Frontend Architecture, Writing Studio & Community Guilds | [@jaxy651](https://github.com/jaxy651) |
-| **Adrita Adhikari** | UI/UX Design, Neurodiversity Typography & Accessibility Systems | [@adritaadhikari](https://github.com/Adrita-Adhikari) |
+| **Debjit Saha** | Frontend Architecture, Writing Studio & Community Guilds | [@Jaxy651](https://github.com/Jaxy651) |
+| **Adrita Adhikari** | UI/UX Design, Neurodiversity Typography & Accessibility Systems | [@Adrita-Adhikari](https://github.com/Adrita-Adhikari) |
 | **Adrisa Bhattacharjee** | Learning Hub, Focus Zone Pomodoro & Vocabulary Interactive Modules | [@adhelixa07](https://github.com/adhelixa07) |
 | **Diganta Mukherjee** | Project Lead, State Management, Storage Architecture & AI Integration | [@digantamukherjee-19](https://github.com/digantamukherjee-19) |
 
