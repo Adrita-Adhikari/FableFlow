@@ -13,7 +13,7 @@
 | :--- | :--- | :--- |
 | **Debjit Saha** | Frontend Architecture, Story Studio & Community Lounges | [@debjit-saha](https://github.com/debjitsaha) |
 | **Adrita Adhikari** | UI/UX Design, Accessibility Systems & Typography Engineering | [@adritaadhikari](https://github.com/Adrita-Adhikari) |
-| **Adrisa Bhattacharya** | Learning Hub, Focus Zone & Vocabulary Interactive Modules | [@adhelixa07](https://github.com/adhelixa07) |
+| **Adrisa Bhattacharjee** | Learning Hub, Focus Zone & Vocabulary Interactive Modules | [@adhelixa07](https://github.com/adhelixa07) |
 | **Diganta Mukherjee** | Project Lead, Routing, State Management & AI Assistant Integration | [@digantamukherjee-19](https://github.com/digantamukherjee-19) |
 
 * **Team Name:** Innov8  
