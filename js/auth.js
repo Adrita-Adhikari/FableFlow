@@ -12,10 +12,12 @@ FableFlow.Auth = (function() {
   const SESSION_TYPE_KEY = 'fableflow_session_type';
 
   let currentUser = null;
+  let entryLoginRequired = false;
 
   function init() {
     initDefaultUsers();
     restoreSession();
+    entryLoginRequired = !currentUser;
     bindEvents();
     updateUI();
   }
@@ -123,6 +125,7 @@ FableFlow.Auth = (function() {
     currentUser = user;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
     localStorage.setItem(SESSION_TYPE_KEY, 'user');
+    entryLoginRequired = false;
 
     if (user.preferences && FableFlow.Accessibility) {
       FableFlow.Accessibility.setFontFamily(user.preferences.fontFamily);
@@ -133,6 +136,9 @@ FableFlow.Auth = (function() {
 
     updateUI();
     closeModal();
+    if (window.FableFlow.Navigation) {
+      window.FableFlow.Navigation.navigateTo('settings');
+    }
     return user;
   }
 
@@ -174,9 +180,13 @@ FableFlow.Auth = (function() {
     currentUser = newUser;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(newUser));
     localStorage.setItem(SESSION_TYPE_KEY, 'user');
+    entryLoginRequired = false;
 
     updateUI();
     closeModal();
+    if (window.FableFlow.Navigation) {
+      window.FableFlow.Navigation.navigateTo('home');
+    }
     return newUser;
   }
 
@@ -191,12 +201,13 @@ FableFlow.Auth = (function() {
     };
     localStorage.setItem(SESSION_TYPE_KEY, 'guest');
     localStorage.removeItem(STORAGE_KEY);
+    entryLoginRequired = false;
 
     updateUI();
     closeModal();
 
     if (window.FableFlow.Navigation) {
-      window.FableFlow.Navigation.navigateTo('home');
+      window.FableFlow.Navigation.navigateTo('settings');
     }
     return currentUser;
   }
@@ -205,11 +216,12 @@ FableFlow.Auth = (function() {
     currentUser = null;
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(SESSION_TYPE_KEY);
+    entryLoginRequired = true;
     updateUI();
     if (window.FableFlow.Navigation) {
       window.FableFlow.Navigation.navigateTo('home');
     }
-    openModal('login');
+    openModal('login', { required: true });
   }
 
   function updateUI() {
@@ -245,10 +257,15 @@ FableFlow.Auth = (function() {
     }
   }
 
-  function openModal(mode = 'login') {
+  function openModal(mode = 'login', options = {}) {
     const modal = document.getElementById('auth-modal');
     if (!modal) return;
     modal.classList.add('open');
+
+    const closeBtn = document.getElementById('auth-modal-close');
+    if (closeBtn) {
+      closeBtn.style.display = (entryLoginRequired || options.required) ? 'none' : '';
+    }
 
     // Keep all fields completely empty when the login or signup page opens
     const loginEmail = document.getElementById('login-email');

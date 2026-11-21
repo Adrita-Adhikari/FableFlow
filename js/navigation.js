@@ -25,7 +25,17 @@ FableFlow.Navigation = (function() {
   function init() {
     bindNavLinks();
     initNavbarSearch();
-    handleHashChange();
+
+    // Make sign-in and accessibility preferences the entry flow on every visit.
+    if (window.FableFlow.Auth && window.FableFlow.Auth.getCurrentUser()) {
+      navigateTo('settings');
+    } else {
+      navigateTo('home');
+      if (window.FableFlow.Auth) {
+        window.FableFlow.Auth.openModal('login', { required: true });
+      }
+    }
+
     window.addEventListener('hashchange', handleHashChange);
   }
 
